@@ -14,6 +14,15 @@ $/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/H
 $brew install podman
 ```
 
+### Fork this repo on GitHub
+Click on fork button
+
+Change repo name
+
+```bash
+$git clone url
+```
+
 ### Run container
 ```bash
 $podman-compose up -d
@@ -25,4 +34,9 @@ $podman exec -it template_melodic_1 /bin/zsh
 ### Stop container
 ```bash
 $podman-compose down -t 1
+```
+
+### List containers
+```bash
+$podman-compose ps
 ```
