@@ -1,9 +1,0 @@
----
-version: '2.0'
-
-services:
-  melodic:
-    image: altayatalay/melodic-template
-    restart: unless-stopped
-    volumes:
-      - ./workspace:/home/rosuser/workspace
