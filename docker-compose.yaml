@@ -1,0 +1,26 @@
+---
+version: "2.1"
+services:
+  webtop:
+    image: docker.io/altayatalay/webtop
+    container_name: webtop
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=501
+      - PGID=20
+      - TZ=Europe/London
+      - KEYBOARD=en-us-qwerty #optional
+      - TITLE=Webtop #optional
+    volumes:
+      - ./config:/config
+    ports:
+      - 3000:3000
+    shm_size: "2gb" #optional
+    restart: unless-stopped
+  melodic:
+    image: docker.io/altayatalay/melodic-template
+    container_name: melodic
+    volumes:
+      - ./workspace:/home/rosuser/workspace
+    restart: unless-stopped
