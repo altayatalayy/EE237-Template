@@ -35,7 +35,8 @@ Click on fork button
 Change repo name
 
 ```bash
-$git clone url
+$git clone <url>
+$cd <project-folder>
 $mkdir workspace
 ```
 
@@ -60,14 +61,7 @@ $docker container ps
 
 ### GUI Apps
 
-To run ros gui apps such as rviz you need to make sure ssh server is running on the ros container.
-Connect to ros container and run:
-
-  ```bash
-  $sudo service ssh start
-  ```
-
-Then open the internet browser app, go to localhost:3000 then open a terminal and run:
+Open the internet browser app, go to localhost:3000 then open a terminal and run:
 
   ```bash
   $ssh -X rosuser@melodic
